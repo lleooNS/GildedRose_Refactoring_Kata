@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import unittest
 
-from gilded_rose import Item, GildedRose
+from src.gilded_rose.gilded_rose import Item, GildedRose
 
 
 class GildedRoseTest(unittest.TestCase):
@@ -32,17 +32,27 @@ class GildedRoseTest(unittest.TestCase):
         gilded_rose = GildedRose(items)
         gilded_rose.update_quality()
 
-        values = [
+        values_day_1 = [
             (9, 19), (-4, 0), (1, 1), (4, 6), (-3, 8), (0, 80), (-1, 80),
             (14, 21), (9, 50), (4, 50), (-11, 0), (2, 4), (-1, 0)
         ]
 
         for i, item in enumerate(items):
 
-            self.assertEqual(values[i][0], item.sell_in)
-            self.assertEqual(values[i][1], item.quality)
+            self.assertEqual(values_day_1[i][0], item.sell_in)
+            self.assertEqual(values_day_1[i][1], item.quality)
 
+        gilded_rose.update_quality()
 
+        values_day_2 = [
+            (8, 18), (-5, 0), (0, 2), (3, 5), (-4, 6), (0, 80), (-1, 80),
+            (13, 22), (8, 50), (3, 50), (-12, 0), (1, 2), (-2, 0)
+        ]
+
+        for i, item in enumerate(items):
+
+            self.assertEqual(values_day_2[i][0], item.sell_in)
+            self.assertEqual(values_day_2[i][1], item.quality)
 
         
 if __name__ == '__main__':
