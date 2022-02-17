@@ -48,7 +48,6 @@ class GildedRose(object):
             product = CreateClassProduct.create_class(item)
             product.update_item_quality()
 
-
             # self.update_item_quality(item)
 
     def update_item_quality(self, item):
