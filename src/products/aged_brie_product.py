@@ -18,3 +18,6 @@ class AgedBrieProduct(object):
 
         if self.item.quality < max_quality:
             self.increment_item_quality()
+
+        if self.item.sell_in < 0 and self.item.quality < max_quality:
+            self.increment_item_quality()

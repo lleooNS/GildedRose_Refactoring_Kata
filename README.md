@@ -4,7 +4,7 @@ This Kata was originally created by Terry Hughes (http://twitter.com/TerryHughes
 
 Emily Bache has refactored the original code, making it available at [here](https://github.com/emilybache/GildedRose-Refactoring-Kata).
 
-In this python version, the objective was to do a refactoring in the code, transforming the items into product classes. Added some tests too.
+In this python version, the objective was to do a refactoring in the code, transforming the items into product classes and added some tests too.
 
 # Gilded Rose Requirements Specification
 

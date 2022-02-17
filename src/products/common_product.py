@@ -12,10 +12,10 @@ class CommonProduct(object):
 
     def update_item_quality(self):
 
+        self.decrement_item_sell_in()
+
         if self.item.sell_in < 0 and self.item.quality > 0:
             self.decrement_item_quality()
 
         if self.item.quality > 0:
             self.decrement_item_quality()
-
-        self.decrement_item_sell_in()
