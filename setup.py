@@ -21,6 +21,7 @@ setup(
     python_requires="==3.8.3",
     install_requires=[
         "pip-chill==1.0.1",
-        "texttest==4.0.9.1"
+        "texttest==4.0.9.1",
+        "python-dotenv==0.19.2"
     ]
 )

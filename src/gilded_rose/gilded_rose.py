@@ -1,11 +1,9 @@
 # -*- coding: utf-8 -*-
-from src.products.aged_brie_product import AgedBrieProduct
-from src.products.backstage_passes_product import BackstagePassesProduct
-from src.products.common_product import CommonProduct
-from src.products.conjured_product import ConjuredProduct
-from src.products.sulfuras_product import SulfurasProduct
-
-max_quality = 50
+from src.products.aged_brie import AgedBrie
+from src.products.backstage_passes import BackstagePasses
+from src.products.common import Common
+from src.products.conjured import Conjured
+from src.products.sulfuras import Sulfuras
 
 
 class GildedRose(object):
@@ -35,10 +33,10 @@ class Item:
 class CreateClassProduct(object):
 
     product_classes = {
-        'Aged Brie': AgedBrieProduct,
-        'Sulfuras, Hand of Ragnaros': SulfurasProduct,
-        'Backstage passes to a TAFKAL80ETC concert': BackstagePassesProduct,
-        'Conjured Mana Cake': ConjuredProduct
+        'Aged Brie': AgedBrie,
+        'Sulfuras, Hand of Ragnaros': Sulfuras,
+        'Backstage passes to a TAFKAL80ETC concert': BackstagePasses,
+        'Conjured Mana Cake': Conjured
     }
 
     def __init__(self, item):
@@ -51,4 +49,4 @@ class CreateClassProduct(object):
 
             return cls.product_classes[item.name](item)
 
-        return CommonProduct(item)
+        return Common(item)
