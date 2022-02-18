@@ -10,3 +10,7 @@ class Conjured(Product):
         super().update_item_quality()
         super().decrement_item_quality()
         super().decrement_item_quality()
+
+        if self.item.sell_in < 0:
+            super().decrement_item_quality()
+            super().decrement_item_quality()
